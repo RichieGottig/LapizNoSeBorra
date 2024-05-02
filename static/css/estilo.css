@@ -1,0 +1,425 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    height: 100%;
+}
+
+body, header, main, footer {
+    min-height: 50px;
+    margin: 0.5rem ;
+    min-width: 400px;
+}
+
+body {
+    /* background-color: gray; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat:repeat;
+}
+
+/* configuracion del header*/
+
+header {
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center; 
+    height: 60px;
+    padding: 0px 50px;
+}
+
+/* Logo y menu */
+.header-logo {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.header-logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.header-menubar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none; /* Quito los puntos del menu */
+}
+
+.header-menubar li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem; /* Los separo para que no queden encimados */
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.header-menubar a:hover {
+    text-decoration:underline;
+    color: red;
+}
+
+/* configuracion del header*/
+
+/* configuracion del home*/
+
+main {
+    min-height: 500px;
+    overflow: auto;  
+   box-shadow: 0 0 0.5rem rgb( 83 78 76 / 50%);
+}
+
+main>div {
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    overflow: auto;
+    text-align: center;
+}
+
+
+.secciones {
+    min-height: 50px;
+    margin: 0.5rem;
+    overflow: auto;
+}
+
+.secciones h3{
+    font-size: 4vw;
+}
+
+.secciones article {
+    margin: 0.5rem;
+    min-height: 20px;
+    overflow: auto;
+}
+
+.secciones ul {
+    list-style: none; /* Quito los puntos de la imagenes */
+}
+
+.secciones li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+}
+
+.personajes-grid{
+    display: grid;   
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;    
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.banner-obra {
+    background-image: url('../img/principal.png');
+    background-size: cover;
+    background-position: bottom;
+    height: 900px;
+    width: 1300px;
+    text-align: center;
+    padding: 0px 160px;
+}
+
+#img-pje {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 400px;
+    height: 600px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover; 
+    filter: blur(8px); /* Aplicar un efecto de desenfoque */
+}
+
+#img-pje:hover {
+    filter: none;/* Aplicar un efecto de desenfoque */
+}
+
+/* configuracion del home*/
+
+/* configuracion de la pagina funciones */
+
+.funciones-grid{
+    display: grid;   
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#img-funcion{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 250px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+/* configuracion de la pagina funciones */
+
+/* configuracion de la pagina detalle de la obra */
+
+ul.obra-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+  
+.obra-grid{
+    display: list-item;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+.obra-grid li{
+    flex:1;
+}
+
+#pareja1, #pareja2, #pareja3  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 250px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto {
+    flex-basis: 50%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 1rem 1rem 0.5rem;
+    object-fit: cover;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#pareja4  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 500px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+/* configuracion de la pagina detalle de la obra */
+
+/* configuracion de la pagina personajes */
+ul.personajes-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+
+#personajes-flex h2 {
+    object-fit: cover;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#personaje-imagen {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 450px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto-personaje {
+    object-fit: cover;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* configuracion de la pagina personajes */
+
+/* cofiguracion de la pagina de registracion */
+
+.Registro-flexbox h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+.Registro-flexbox {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario */
+    padding: 10px; /* Espaciado interno */
+    font-size: 1.5rem;
+    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+}
+
+.Registro-flexbox label{
+    color: #4c0404;
+    font-weight: bolder;
+}
+
+.dato-flex {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+.dato-flex:last-child {
+    margin-right: 0; /* El último campo no necesita margen a la derecha */
+}
+
+/* Estilos para los campos de texto */
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 100%; /* Hacer que el campo ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para el texto */
+    font-size: 1rem; /* Tamaño de la fuente */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+
+/* Estilos para el botón */
+button {
+    padding: 15px 30px; /* Aumenta el espaciado interno del botón */
+    font-size: 18px; /* Incrementa el tamaño de la fuente */
+    font-weight: bold; /* Hacer el texto negrita */
+    border: none; /* Sin borde */
+    background-color: rgb(67, 70, 67); /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio del cursor al puntero */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añadir sombra para dar profundidad */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    background-color: black; /* Cambio de color al pasar el ratón */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el ratón */
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir la sombra al hacer clic */
+}
+
+
+/* cofiguracion de la pagina de registracion */
+
+/* configuracion del footer*/
+
+footer {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+    display: flex;
+    justify-content: end;    
+    align-items: end; 
+    height: 100px;
+    padding: 0px 50px;
+}
+
+.footer-contacto ul {
+    list-style: none;
+}
+
+.footer-contacto li {
+    float:right;
+    padding: 0.5rem;
+
+}
+
+.footer-contacto img {
+    height: 30px;
+    width: 30px;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+#contacto:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* configuracion del footer*/

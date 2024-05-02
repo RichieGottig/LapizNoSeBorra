@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta: http-equiv="X-UA-Compatible" content="IE-edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El lapiz no se borra</title>
+    <link rel="Lapiz-icon" href="./static/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./static/css/estilo.css">
+    <script src="https://kit.fontawesome.com/f7fb471b65.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+     <header>
+        <nav>
+            <div class="header-logo">
+            <a href="inicio.html">
+                <img src="./static/img/logo.ico" alt="Logo">
+            </a>
+            </div>
+            <!--Menu de navegación-->
+            <ul class="header-menubar">
+                <li>
+                    <a href="funciones.html">Nustras funciones</a>
+                </li>
+                <li>
+                    <a href="prensa.html">Prensa</a>
+                </li>
+                <li>
+                    <a href="inicio.html#personajes">Los Personajes</a>
+                </li>
+                <li>
+                    <a href="registro.html">Resgistrate</a>
+                </li>
+            </ul>
+        </nav>
+     </header>
+     <main>
+        <section>
+            <article>
+                <div>
+                <h2>Registrate para que nos contactemos con vos!</h2>
+                </div>
+                <div class="Registro-flexbox">
+                    <form action="" id="formRegister" method="get">
+                        <div class="dato-flex">
+                            <label for="firstname">Nombre: </label>
+                            <input type="text" id="firstname" name="firstname">
+                        </div>
+                        <div class="dato-flex">
+                            <label for="lastname">Apellido: </label>
+                            <input type="text" id="lastname" name="lastname">
+                        </div>
+                        <div class="dato-flex">
+                            <label for="email">Dirección de mail: </label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="dato-flex">
+                            <label for="birthday">Fecha de nacimiento: </label>
+                            <input type="date" id="birthday" name="birthday">
+                        </div>
+                        <div class="dato-flex">
+                            <label for="know">Como te enteraste de nosotros: </label>
+                            <select name="know" id="know">
+                                <option value="">--Seleccione--</option>
+                                <option value="WB">Por la pagina</option>
+                                <option value="IG">Instagram</option>
+                                <option value="TK">Tik Tok</option>
+                                <option value="TW">Twitter</option>
+                                <option value="FB">Facebook</option>
+                                <option value="PR">Por una nota periodistica</option>
+                                <option value="YT">YouTube</option>
+                                <option value="CL">Por el colegio</option>
+                            </select>
+                        </div>
+                        <div class="dato-flex">
+                            <label for="terms">Queres recibir novedades de la obra y proximas funciones?</label>
+                            <input type="checkbox" id="terms">
+                        </div>
+                        <br>
+                        <button type="submit">Enviar</button>                
+                    </form>
+                </div>
+            </article>
+        </section>
+     </main>
+     <footer>
+        <!-- Contactos -->
+        <div class="footer-contacto">
+            <ul>
+                <li>
+                    <div id="contacto"><a  title="Volver al inicio" href="inicio.html"><img src="./static/img/logo.ico" alt="logo"></a></div>
+                </li>
+                <li>
+                    <div id="contacto"><a  title="Envianos un mensaje de Whatsapp" href="https://api.whatsapp.com/send?phone=5491122825133&&text=Hola%21%0AQuiero%20informaci%C3%B3n%20de%20la%20obra%3F" target="_blank"><img src="./static/img/whatsapp.png" alt="whatsapp"></a></div>
+                </li>
+                <li>
+                    <div id="contacto"><a  title="Nuestro Twitter" href="https://twitter.com/ellapizlaobra" target="_blank"><img src="./static/img/twitter.png" alt="twitter"></a></div>
+                </li>
+                <li>
+                    <div id="contacto"><a  title="Nuestro Instagram" href="https://www.instagram.com/ellapiznoseborralaobra/" target="_blank"><img src="./static/img/instagram.png" alt="instagram"></a></div>
+                </li>
+                <li>
+                    <div id="contacto"><a title="Nuestro Tik Tok" href="https://www.tiktok.com/@ellapiznoseborralaobra" target="_blank"><img src="./static/img/tiktok.png" alt="tiktok"></a></div>
+                </li>
+                <li>
+                    <div id="contacto"><a title="Envianos un mail" href="#" onclick="window.location.href='mailto:santylaya56@gmail.com&subject=Contacto%20web&body=Hola!%0D%0AQuiero%20información%20de%20la%20obra.%0D%0A%0D%0AMis%20datos%20de%20contacto:%0D%0ANombre:%20%0D%0ATeléfono:%20%0D%0AMail:%20%0D%0AComo%20te%20enteraste%20de%20nosotros:%20%0D%0A%0D%0A%0D%0ASaludos.'; return false;" target="_blank"><img src="./static/img/email.png" alt="Correo"></a></div>
+                </li>
+                <li>
+                    <p>Contactate con nosotros: </p>
+                </li>
+            </ul>
+        </div>
+     </footer>
+</body>
+</html>
