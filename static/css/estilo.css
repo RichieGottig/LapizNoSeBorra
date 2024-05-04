@@ -1,3 +1,5 @@
+/* inicio configuracion generales*/
+
 * {
     padding: 0;
     box-sizing: border-box;
@@ -23,7 +25,9 @@ body {
     background-repeat:repeat;
 }
 
-/* configuracion del header*/
+/* fin configuracion generales*/
+
+/* inicio configuracion del header*/
 
 header {
     box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
@@ -87,9 +91,9 @@ nav ul {
     color: red;
 }
 
-/* configuracion del header*/
+/* fin configuracion del header*/
 
-/* configuracion del home*/
+/* inicio configuracion del home*/
 
 main {
     min-height: 500px;
@@ -117,6 +121,10 @@ main>div {
     font-size: 4vw;
 }
 
+.secciones h4{
+    font-size: 1.5vw;
+}
+
 .secciones article {
     margin: 0.5rem;
     min-height: 20px;
@@ -131,16 +139,6 @@ main>div {
     float: left; /* Agrupo para que quede uno al lado del otro */
 }
 
-.personajes-grid{
-    display: grid;   
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    justify-items: center;    
-    align-items: center;
-    row-gap: 20px;
-    column-gap: 20px;
-}
-
 .banner-obra {
     background-image: url('../img/principal.png');
     background-size: cover;
@@ -149,6 +147,16 @@ main>div {
     width: 1300px;
     text-align: center;
     padding: 0px 160px;
+}
+
+.personajes-grid{
+    display: grid;   
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;    
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 #img-pje {
@@ -171,9 +179,9 @@ main>div {
     filter: none;/* Aplicar un efecto de desenfoque */
 }
 
-/* configuracion del home*/
+/* fin configuracion del home*/
 
-/* configuracion de la pagina funciones */
+/* inicio configuracion de la pagina funciones */
 
 .funciones-grid{
     display: grid;   
@@ -200,9 +208,87 @@ main>div {
     object-fit: cover; 
 }
 
-/* configuracion de la pagina funciones */
+/* fin configuracion de la pagina funciones */
 
-/* configuracion de la pagina detalle de la obra */
+/* inicio configuracion de la pagina prensa */
+
+.prensa-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-1, #prensa-2{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+.nota-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-3, #prensa-4{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+.radio-grid{
+    display: grid;   
+    /* grid-template-columns: repeat(2,1fr); */
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-5{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+/* fin configuracion de la pagina prensa */
+
+
+/* inicio configuracion de la pagina detalle de la obra */
 
 ul.obra-grid {
     list-style: none; /* Quita las viñetas */
@@ -270,9 +356,9 @@ ul.obra-grid {
     object-fit: cover;
 }
 
-/* configuracion de la pagina detalle de la obra */
+/* fin configuracion de la pagina detalle de la obra */
 
-/* configuracion de la pagina personajes */
+/* inicio configuracion de la pagina personajes */
 ul.personajes-grid {
     list-style: none; /* Quita las viñetas */
     padding: 0;       /* Elimina el relleno */
@@ -308,51 +394,55 @@ ul.personajes-grid {
     font-weight: bold;
 }
 
-/* configuracion de la pagina personajes */
+/* fin configuracion de la pagina personajes */
 
-/* cofiguracion de la pagina de registracion */
+/* inicio cofiguracion de la pagina de registracion */
 
-.Registro-flexbox h2 {
+.Registro h2 {
     font-size: 2rem;
     text-align: center;
     margin: 0 auto; 
 }
 
-.Registro-flexbox {
-    max-width: 600px; /* Ancho máximo del formulario */
+article.Registro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 1rem; /* Espacio entre celdas */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave */
+    max-width: 600px; /* Ancho máximo */
     margin: 0 auto; /* Centrar el formulario */
-    padding: 10px; /* Espaciado interno */
-    font-size: 1.5rem;
-    display: flex; /* Usa flexbox para alinear elementos horizontalmente */
-    justify-content: space-between; /* Espaciado uniforme entre elementos */
 }
 
-.Registro-flexbox label{
-    color: #4c0404;
-    font-weight: bolder;
+.dato-flex-1 {
+    display: flex; /* Hace que los elementos se alineen horizontalmente */
+    flex-direction: column; /* Etiquetas encima de los campos */
+    justify-content: center;
 }
 
-.dato-flex {
-    flex: 1;
-    margin-right: 10px; 
+label {
+    font-weight: bold; /* Hacer que las etiquetas sean negritas */
+    font-size: 16px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de texto de etiquetas */
+    margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
 }
 
-.dato-flex:last-child {
-    margin-right: 0; /* El último campo no necesita margen a la derecha */
-}
-
-/* Estilos para los campos de texto */
 input[type="text"], input[type="email"], input[type="date"], select {
-    width: 100%; /* Hacer que el campo ocupe todo el ancho del contenedor */
-    padding: 10px; /* Espaciado interno para el texto */
-    font-size: 1rem; /* Tamaño de la fuente */
-    border: 1px solid #ccc; /* Borde */
+    width: 500px; /* Hacer que el campo ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para los campos */
+    font-size: 1rem; /* Tamaño de fuente para campos */
+    border: 1px solid #ccc; /* Borde sutil */
     border-radius: 4px; /* Bordes redondeados */
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: box-shadow 0.3s; /* Transición para efectos suaves */
 }
 
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+    box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}
 
-/* Estilos para el botón */
 button {
     padding: 15px 30px; /* Aumenta el espaciado interno del botón */
     font-size: 18px; /* Incrementa el tamaño de la fuente */
@@ -370,17 +460,18 @@ button {
 
 button:hover {
     background-color: black; /* Cambio de color al pasar el ratón */
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el ratón */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reducir la sombra al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra al hacer clic */
 }
 
 
-/* cofiguracion de la pagina de registracion */
 
-/* configuracion del footer*/
+/* fin cofiguracion de la pagina de registracion */
+
+/* inicio configuracion del footer*/
 
 footer {
     height: auto;
@@ -422,4 +513,1068 @@ footer {
     100% { transform: translate(0, 0) rotate(0deg); }
 }
 
-/* configuracion del footer*/
+/* fin configuracion del footer*/
+
+
+/* inicio configuracion para tablet */
+
+@media screen and (min-width: 768px) and (max-width:1023px){
+
+/* inicio configuracion generales*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    height: 100%;
+}
+
+body, header, main, footer {
+    min-height: 50px;
+    margin: 0.5rem ;
+    min-width: 400px;
+}
+
+body {
+    /* background-color: gray; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat:repeat;
+}
+
+/* fin configuracion generales*/
+
+/* inicio configuracion del header*/
+
+header {
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center; 
+    height: 60px;
+    padding: 0px 50px;
+}
+
+/* Logo y menu */
+.header-logo {
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.header-logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.header-menubar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0.5rem 0 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none; /* Quito los puntos del menu */
+}
+
+.header-menubar li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem; /* Los separo para que no queden encimados */
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.header-menubar a:hover {
+    text-decoration:underline;
+    color: red;
+}
+
+/* fin configuracion del header*/
+
+/* inicio configuracion del home*/
+
+main {
+    min-height: 500px;
+    overflow: auto;  
+   box-shadow: 0 0 0.5rem rgb( 83 78 76 / 50%);
+}
+
+main>div {
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    overflow: auto;
+    text-align: center;
+}
+
+
+.secciones {
+    min-height: 50px;
+    margin: 0.5rem;
+    overflow: auto;
+}
+
+.secciones h3{
+    font-size: 4vw;
+}
+
+.secciones h4{
+    font-size: 1.5vw;
+}
+
+.secciones article {
+    margin: 0.5rem;
+    min-height: 20px;
+    overflow: auto;
+}
+
+.secciones ul {
+    list-style: none; /* Quito los puntos de la imagenes */
+}
+
+.secciones li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+}
+
+.banner-obra {
+    background-image: url('../img/principal.png');
+    background-size: cover;
+    background-position: bottom;
+    height: 700px;
+    width: 900px;
+    text-align: center;
+    padding: 0px 160px;
+}
+
+.personajes-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;    
+    align-items: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+#img-pje {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 400px;
+    height: 600px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover; 
+    filter: blur(8px); /* Aplicar un efecto de desenfoque */
+}
+
+#img-pje:hover {
+    filter: none;/* Aplicar un efecto de desenfoque */
+}
+
+/* fin configuracion del home*/
+
+/* inicio configuracion de la pagina funciones */
+
+.funciones-grid{
+    display: grid;   
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.3rem;
+    column-gap: 0.3rem;
+}
+
+#img-funcion{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 200px;
+    height: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+/* fin configuracion de la pagina funciones */
+
+/* inicio configuracion de la pagina prensa */
+
+.prensa-grid{
+    display: grid;   
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-1, #prensa-2{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+.nota-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-3, #prensa-4{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+.radio-grid{
+    display: grid;   
+    /* grid-template-columns: repeat(2,1fr); */
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-5{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+/* fin configuracion de la pagina prensa */
+
+
+/* inicio configuracion de la pagina detalle de la obra */
+
+ul.obra-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+  
+.obra-grid{
+    display: list-item;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+.obra-grid li{
+    flex:1;
+}
+
+#pareja1, #pareja2  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 250px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto {
+    flex-basis: 50%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 1rem 1rem 0.5rem;
+    object-fit: cover;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#pareja4  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 800px;
+    height: 500px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+/* fin configuracion de la pagina detalle de la obra */
+
+/* inicio configuracion de la pagina personajes */
+
+ul.personajes-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+
+#personajes-flex h2 {
+    object-fit: cover;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#personaje-imagen {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 450px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto-personaje {
+    object-fit: cover;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* fin configuracion de la pagina personajes */
+
+/* inicio cofiguracion de la pagina de registracion */
+
+.Registro h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+article.Registro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 1rem; /* Espacio entre celdas */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave */
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+.dato-flex-1 {
+    display: flex; /* Hace que los elementos se alineen horizontalmente */
+    flex-direction: column; /* Etiquetas encima de los campos */
+    justify-content: center;
+}
+
+label {
+    font-weight: bold; /* Hacer que las etiquetas sean negritas */
+    font-size: 16px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de texto de etiquetas */
+    margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
+}
+
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 500px; /* Hacer que el campo ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para los campos */
+    font-size: 1rem; /* Tamaño de fuente para campos */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: box-shadow 0.3s; /* Transición para efectos suaves */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+    box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}
+
+button {
+    padding: 15px 30px; /* Aumenta el espaciado interno del botón */
+    font-size: 18px; /* Incrementa el tamaño de la fuente */
+    font-weight: bold; /* Hacer el texto negrita */
+    border: none; /* Sin borde */
+    background-color: rgb(67, 70, 67); /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio del cursor al puntero */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añadir sombra para dar profundidad */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    background-color: black; /* Cambio de color al pasar el ratón */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra al hacer clic */
+}
+
+
+
+/* fin cofiguracion de la pagina de registracion */
+
+/* inicio configuracion del footer*/
+
+footer {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+    display: flex;
+    justify-content: end;    
+    align-items: end; 
+    height: 100px;
+    padding: 0px 50px;
+}
+
+.footer-contacto ul {
+    list-style: none;
+}
+
+.footer-contacto li {
+    float:right;
+    padding: 0.5rem;
+
+}
+
+.footer-contacto img {
+    height: 30px;
+    width: 30px;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+#contacto:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* fin configuracion del footer*/
+    
+} 
+
+/* fin configuracion para tablet */
+
+/* inicio configuracion para celulares */
+
+ @media screen and (max-width: 767px) {
+    
+/* inicio configuracion generales*/
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 1rem;
+    height: 100%;
+}
+
+body, header, main, footer {
+    min-height: 20px;
+    margin: 0.2rem ;
+    min-width: 100px;
+}
+
+body {
+    /* background-color: gray; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5vw;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-repeat:repeat;
+}
+
+/* fin configuracion generales*/
+
+/* inicio configuracion del header*/
+
+header {
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center; 
+    height: 60px;
+    width: 750px;
+    padding: 0px 0px;
+}
+
+/* Logo y menu */
+.header-logo {
+    width: 10px;
+    display: inline-block;
+    margin: 0;
+}
+
+.header-logo:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.header-menubar {
+    left: auto;
+    position: relative;
+    top: auto;
+    width: auto;
+    display: inline-block;
+    margin: 0 0 0 0;
+}
+
+nav ul {
+    list-style: none; /* Quito los puntos del menu */
+}
+
+.header-menubar li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+    font-weight: 600px;
+    font-size: 50px;
+    text-align: center;
+    padding: 10px; /* Los separo para que no queden encimados */
+}
+
+.header-menubar a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.header-menubar a:hover {
+    text-decoration:underline;
+    color: red;
+}
+
+/* fin configuracion del header*/
+
+/* inicio configuracion del home*/
+
+main {
+    min-height: 100px;
+    overflow: auto;  
+   box-shadow: 0 0 0.5rem rgb( 83 78 76 / 50%);
+}
+
+main>div {
+    min-height: 180px;
+    margin: 0.5rem;
+    height: auto;
+    float: left;
+    overflow: auto;
+    text-align: center;
+}
+
+
+.secciones {
+    min-height: 50px;
+    margin: 0.5rem;
+    overflow: auto;
+}
+
+.secciones h3{
+    font-size: 4vw;
+}
+
+.secciones h4{
+    font-size: 2vw;
+}
+
+.secciones article {
+    margin: 0.5rem;
+    min-height: 20px;
+    overflow: auto;
+}
+
+.secciones ul {
+    list-style: none; /* Quito los puntos de la imagenes */
+}
+
+.secciones li {
+    float: left; /* Agrupo para que quede uno al lado del otro */
+}
+
+.banner-obra {
+    background-image: url('../img/principal.png');
+    background-size: cover;
+    background-position: bottom;
+    height: 500px;
+    width: 700px;
+    text-align: center;
+    padding: 0px 0px;
+}
+
+#lapiz {
+    height: 200px;
+    width: 300px;
+}
+
+.personajes{
+    margin: 0;
+    padding: 0;
+}
+
+.personajes-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;    
+    align-items: center;
+}
+
+#img-pje {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 350px;
+    height: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0 0 0 0 ;
+    object-fit: cover; 
+    filter: blur(8px); /* Aplicar un efecto de desenfoque */
+}
+
+#img-pje:hover {
+    filter: none;/* Aplicar un efecto de desenfoque */
+}
+
+/* fin configuracion del home*/
+
+/* inicio configuracion de la pagina funciones */
+
+.funciones-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(10,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0;
+    column-gap: 0;
+}
+
+#img-funcion{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 330px;
+    height: 600px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+/* fin configuracion de la pagina funciones */
+
+/* inicio configuracion de la pagina prensa */
+
+.prensa-grid{
+    display: grid;   
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-1, #prensa-2{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover; 
+}
+
+.nota-grid{
+    display: grid;   
+    grid-template-columns: repeat(2,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-3, #prensa-4{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+.radio-grid{
+    display: grid;   
+    /* grid-template-columns: repeat(2,1fr); */
+    /* grid-template-rows: repeat(4,1fr); */
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+#prensa-5{
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+   /*  width: 250px;
+    height: 300px; */
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.1rem 0.1rem 0.1rem 0.1rem;
+    object-fit: cover;
+}
+
+/* fin configuracion de la pagina prensa */
+
+
+/* inicio configuracion de la pagina detalle de la obra */
+
+ul.obra-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+  
+.obra-grid{
+    display: list-item;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+}
+
+.obra-grid li{
+    flex:1;
+}
+
+#pareja1, #pareja2, #pareja3  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 220px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto {
+    flex-basis: 50%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 1rem 1rem 0.5rem;
+    object-fit: cover;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#pareja4  {
+    flex-basis: 33%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 700px;
+    height: 500px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+/* fin configuracion de la pagina detalle de la obra */
+
+/* inicio configuracion de la pagina personajes */
+
+ul.personajes-grid {
+    list-style: none; /* Quita las viñetas */
+    padding: 0;       /* Elimina el relleno */
+    margin: 0;        /* Elimina el margen */
+  }
+
+#personajes-flex h2 {
+    object-fit: cover;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#personaje-imagen {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background-position: bottom;
+    width: 300px;
+    height: 350px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 600ms;
+    transform-origin: center left;
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    object-fit: cover;
+}
+
+#texto-personaje {
+    object-fit: cover;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: bold;
+}
+
+/* fin configuracion de la pagina personajes */
+
+/* inicio cofiguracion de la pagina de registracion */
+
+.Registro h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto; 
+}
+
+article.Registro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+    gap: 1rem; /* Espacio entre celdas */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo suave */
+    max-width: 600px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar el formulario */
+}
+
+.dato-flex-1 {
+    display: flex; /* Hace que los elementos se alineen horizontalmente */
+    flex-direction: column; /* Etiquetas encima de los campos */
+    justify-content: center;
+}
+
+label {
+    font-weight: bold; /* Hacer que las etiquetas sean negritas */
+    font-size: 18px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de texto de etiquetas */
+    margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
+}
+
+input[type="text"], input[type="email"], input[type="date"], select {
+    width: 300px; /* Hacer que el campo ocupe todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno para los campos */
+    font-size: 1rem; /* Tamaño de fuente para campos */
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: box-shadow 0.3s; /* Transición para efectos suaves */
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, select:focus {
+    box-shadow: inset 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra azul al enfocar */
+}
+
+button {
+    padding: 10px 15px; /* Aumenta el espaciado interno del botón */
+    font-size: 18px; /* Incrementa el tamaño de la fuente */
+    font-weight: bold; /* Hacer el texto negrita */
+    border: none; /* Sin borde */
+    background-color: rgb(67, 70, 67); /* Color de fondo */
+    color: white; /* Color del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio del cursor al puntero */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Añadir sombra para dar profundidad */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    display: block;
+    margin: auto;
+}
+
+button:hover {
+    background-color: black; /* Cambio de color al pasar el ratón */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra al hacer clic */
+}
+
+
+
+/* fin cofiguracion de la pagina de registracion */
+
+/* inicio configuracion del footer*/
+
+footer {
+    height: auto;
+    width: auto;
+    overflow: auto;
+    box-shadow: 0 0 1rem rgb( 83 78 76 / 75%);
+    display: flex;
+    justify-content: end;    
+    align-items: end; 
+    height: 100px;
+    padding: 0px 50px;
+}
+
+.footer-contacto ul {
+    list-style: none;
+}
+
+.footer-contacto li {
+    float:right;
+    padding: 0.5rem;
+
+}
+
+.footer-contacto img {
+    height: 30px;
+    width: 30px;
+    margin: 0.5rem 1rem 0.5rem 1rem;
+}
+
+#contacto:hover {
+    animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0deg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* fin configuracion del footer*/
+
+}
+
+/* fin configuracion para tablet */
