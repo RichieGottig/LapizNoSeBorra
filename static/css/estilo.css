@@ -1136,7 +1136,7 @@ footer {
     .header-menubar a {
         text-decoration: none;
         color: black;
-        font-size: 0.5rem;
+        font-size: 0.65rem;
     }
     
     .header-menubar a:hover {
@@ -1198,7 +1198,7 @@ footer {
         background-position-x: 100%;
         background-position-y: bottom;
         height: 400px;
-        width: 300px;
+        width: 380px;
         text-align: center;
         padding: 0px 0px;
     }
@@ -1396,7 +1396,7 @@ footer {
         transform-origin: center left;
         margin: 0.5rem 1rem 1rem 0.5rem;
         object-fit: cover;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-style: normal;
         font-weight: bold;
     }
@@ -1467,11 +1467,11 @@ footer {
     /* inicio cofiguracion de la pagina de registracion */
     
     h2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .Registro h2 {
-        font-size: 3rem;
+        font-size: 2.5rem;
         text-align: center;
         margin: 0 auto; 
     }
@@ -1496,14 +1496,14 @@ footer {
     
     label {
         font-weight: bold; /* Hacer que las etiquetas sean negritas */
-        font-size: 18px; /* Tamaño de fuente para etiquetas */
+        font-size: 15px; /* Tamaño de fuente para etiquetas */
         color: #333; /* Color de texto de etiquetas */
         margin-bottom: 0.5rem; /* Espacio debajo de las etiquetas */
     }
     
     input[type="text"], input[type="email"], input[type="date"], select {
-        width: 300px; /* Hacer que el campo ocupe todo el ancho del contenedor */
-        padding: 10px; /* Espaciado interno para los campos */
+        width:250px; /* Hacer que el campo ocupe todo el ancho del contenedor */
+        padding: 5px; /* Espaciado interno para los campos */
         font-size: 1rem; /* Tamaño de fuente para campos */
         border: 1px solid #ccc; /* Borde sutil */
         border-radius: 10px; /* Bordes redondeados */
