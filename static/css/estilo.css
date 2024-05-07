@@ -19,7 +19,7 @@ body, header, main, footer {
 body {
     /* background-color: gray; */
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.5vw;
+    font-size: 1rem;
     background-image: url(../img/fondo.jpg);
     background-size: cover;
     background-repeat:repeat;
