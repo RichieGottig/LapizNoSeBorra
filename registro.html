@@ -42,23 +42,27 @@
                 <h2>Registrate para que nos contactemos con vos!</h2>
                 </div>
                 <div class="Registro-flexbox">
-                    <form action="" id="formRegister" method="get">
+                    <form action="#" id="formRegister" method="GET" novalidate>
                         <div class="dato-flex">
                             <label for="firstname">Nombre: </label>
                             <input type="text" id="firstname" name="firstname">
                         </div>
+                        <div class="error" id="error-firstname"></div>
                         <div class="dato-flex">
                             <label for="lastname">Apellido: </label>
                             <input type="text" id="lastname" name="lastname">
                         </div>
+                        <div class="error" id="error-lastname"></div>
                         <div class="dato-flex">
                             <label for="email">Dirección de mail: </label>
                             <input type="email" id="email" name="email">
                         </div>
+                        <div class="error" id="error-email"></div>
                         <div class="dato-flex">
                             <label for="birthday">Fecha de nacimiento: </label>
                             <input type="date" id="birthday" name="birthday">
                         </div>
+                        <div class="error" id="error-birthday"></div>
                         <div class="dato-flex">
                             <label for="know">Como te enteraste de nosotros: </label>
                             <select name="know" id="know">
@@ -73,12 +77,13 @@
                                 <option value="CL">Por el colegio</option>
                             </select>
                         </div>
+                        <div class="error" id="error-know"></div>
                         <div class="dato-flex">
                             <label for="terms">Queres recibir novedades de la obra y proximas funciones?</label>
                             <input type="checkbox" id="terms">
-                        </div>
+                        </div>                      
                         <br>
-                        <button type="submit">Enviar</button>                
+                        <button type="submit" id="btn-send">Enviar</button>                
                     </form>
                 </div>
             </article>
@@ -106,5 +111,6 @@
             </ul>
         </div>
      </footer>
+     <script src="./static/js/validacion-registro.js"></script>
 </body>
 </html>
